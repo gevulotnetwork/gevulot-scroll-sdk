@@ -4,3 +4,6 @@
 
 We use quite dated and unstable toolchain - `nightly-2023-12-03` - because we had to make this package compatibile with https://github.com/scroll-tech/scroll-proving-sdk/blob/dd9b5efd9e022a82c665685f8f21b63e97ffbfee/rust-toolchain.toml[Scroll's Proving SDK].
 
+Packages downgraded:
+
+- `alloy-primitives` from `0.8.10` to `=0.8.0` (Rust `v1.79.0` is required since `0.8.1`)
