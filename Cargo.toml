@@ -10,14 +10,14 @@ prover = ["dep:base64"]
 
 [dependencies]
 
+# Asynchronous runtime.
+async-trait = { version = "0.1", default-features = false }
+
 # Encoding
 base64 = { version = "0.22", default-features = false, optional = true }
 
 # Ethereum basis.
 alloy-primitives = { version = "=0.8.0", default-features = false, features = ["serde"] }
-
-# Asynchronous runtime.
-async-trait = { version = "0.1", default-features = false }
 
 # HTTP client.
 reqwest = { version = "0.12", default-features = false, optional = true, features = ["json"] }
