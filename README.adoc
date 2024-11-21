@@ -1,5 +1,9 @@
 = Gevulot's Scroll SDK
 
+Base SDK used in integrating Scroll with Gevulot.
+
+It provides client that implements copy of Scroll's `ProvingService` interface.
+
 == Toolchain
 
 We use quite dated and unstable toolchain - `nightly-2023-12-03` - because we had to make this package compatibile with https://github.com/scroll-tech/scroll-proving-sdk/blob/dd9b5efd9e022a82c665685f8f21b63e97ffbfee/rust-toolchain.toml[Scroll's Proving SDK].
