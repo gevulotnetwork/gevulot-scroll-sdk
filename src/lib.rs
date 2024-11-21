@@ -8,6 +8,9 @@ pub const CIRCUIT_VERSION_0_13: &str = "v0.13.1";
 #[cfg(feature = "client")]
 pub mod client;
 
+#[cfg(feature = "prover")]
+pub mod prover;
+
 #[derive(Deserialize, Serialize, Debug)]
 pub struct GetVkRequest {
   pub circuit_type: String,

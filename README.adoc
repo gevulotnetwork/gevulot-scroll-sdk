@@ -2,7 +2,10 @@
 
 Base SDK used in integrating Scroll with Gevulot.
 
-It provides client that implements copy of Scroll's `ProvingService` interface.
+It provides:
+
+- Client that implements copy of Scroll's `ProvingService` interface.
+- Basic prover types - proof, tasks etc.
 
 == Toolchain
 
