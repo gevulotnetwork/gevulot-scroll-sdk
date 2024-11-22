@@ -4,7 +4,7 @@ use crate::{
   GetVkRequest, GetVkResponse, ProveRequest, ProveResponse, QueryTaskRequest, QueryTaskResponse,
 };
 
-const DEFAULT_PROVING_SERVICE_URL: &str = "http://scroll-proving-service.gevulot.com:3000";
+pub const DEFAULT_PROVING_SERVICE_URL: &str = "http://scroll-proving-service.gevulot.com:3000";
 
 pub struct Client {
   proving_service_url: String,
@@ -12,9 +12,9 @@ pub struct Client {
 }
 
 impl Client {
-  pub fn new(auth_token: Option<String>) -> Self {
+  pub fn new(proving_service_url: String, auth_token: Option<String>) -> Self {
     Client {
-      proving_service_url: DEFAULT_PROVING_SERVICE_URL.to_string(),
+      proving_service_url,
       auth_token: auth_token.unwrap_or("".to_string()),
     }
   }
