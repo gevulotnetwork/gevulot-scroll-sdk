@@ -13,7 +13,7 @@ pub mod prover;
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct GetVkRequest {
-  pub circuit_type: String,
+  pub circuit_type: CircuitType,
   pub circuit_version: String,
 }
 
@@ -25,7 +25,7 @@ pub struct GetVkResponse {
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct ProveRequest {
-  pub circuit_type: String,
+  pub circuit_type: CircuitType,
   pub circuit_version: String,
   pub hard_fork_name: String,
   pub input: String,
@@ -34,7 +34,7 @@ pub struct ProveRequest {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct ProveResponse {
   pub task_id: String,
-  pub circuit_type: String,
+  pub circuit_type: CircuitType,
   pub circuit_version: String,
   pub hard_fork_name: String,
   pub status: TaskStatus,
@@ -56,7 +56,7 @@ pub struct QueryTaskRequest {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct QueryTaskResponse {
   pub task_id: String,
-  pub circuit_type: String,
+  pub circuit_type: CircuitType,
   pub circuit_version: String,
   pub hard_fork_name: String,
   pub status: TaskStatus,
