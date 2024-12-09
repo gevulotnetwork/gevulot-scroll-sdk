@@ -13,6 +13,8 @@ pub struct Client {
 
 impl Client {
   pub fn new(proving_service_url: String, auth_token: Option<String>) -> Self {
+    // NOTE: We always want to store the basic URL without trailing slash.
+    let proving_service_url = proving_service_url.trim_end_matches('/').to_string();
     Client {
       proving_service_url,
       auth_token: auth_token.unwrap_or("".to_string()),
