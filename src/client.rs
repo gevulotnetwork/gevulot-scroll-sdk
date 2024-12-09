@@ -46,7 +46,7 @@ impl ProvingService for Client {
     let response = client
       .get(endpoint)
       .query(&[
-        ("circuit_type", req.circuit_type.to_string()),
+        ("circuit_type", req.circuit_type.to_u8().to_string()),
         ("circuit_version", req.circuit_version),
       ])
       .send()
